@@ -5,6 +5,31 @@ body {
   margin: 0;
   padding: 0;
 }
+.nav-link {
+  position: relative;
+  color: #374151;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2563eb;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
 
 
 
@@ -87,6 +112,30 @@ footer {
 }
 #carousel img { 
     height: 500px;
-    align-items: center; /* tamaño fijo */
-      /* mantiene proporción */
-     }
+    align-items: center; 
+      
+    }
+#modalContacto{
+  display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        align-items: center;
+        justify-content: center;
+}
+#modal{
+  width: 90%;
+        max-width: 520px;
+        height: 85%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+}
+#overlayContacto{
+  display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+}
