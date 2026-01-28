@@ -24,31 +24,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const botonesFiltro = document.querySelectorAll('#filtros button');
-    const tarjetas = document.querySelectorAll('section .bg-gradient-to-r');
-
-    botonesFiltro.forEach(boton => {
-        boton.addEventListener('click', () => {
-            const gen = boton.dataset.generacion;
-
-            tarjetas.forEach(tarjeta => {
-                const nombre = tarjeta.querySelector('h3').textContent.toLowerCase();
-
-                if (gen === '1') {
-                    tarjeta.style.display = nombre.includes('playstation 1') || nombre.includes('playstation 2') ? 'block' : 'none';
-                } else if (gen === '2') {
-                    tarjeta.style.display = nombre.includes('playstation 3') || nombre.includes('playstation 4') || nombre.includes('playstation 5') ? 'block' : 'none';
-                } else if (gen === 'portatil') {
-                    tarjeta.style.display = nombre.includes('psp') || nombre.includes('vita') ? 'block' : 'none';
-                }
-            });
-        });
-    });
-
-    const mostrarTodo = document.getElementById('mostrarTodo');
-    if (mostrarTodo) {
-        mostrarTodo.addEventListener('click', () => {
-            tarjetas.forEach(t => t.style.display = 'block');
-        });
-    }
 });
