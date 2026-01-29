@@ -130,5 +130,5 @@ contenedor.addEventListener("click", (e) => {
         actualizarContador();
     }
 });
-
+actualizarContador();
 
