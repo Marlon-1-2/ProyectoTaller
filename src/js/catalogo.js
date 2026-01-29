@@ -67,8 +67,8 @@ const cargarTienda = async () => {
         //recorrer la lista de mandos
         datos.forEach((mandos) => {
             contenedor.innerHTML += `
-                <div class="p-8 border rounded-lg dark:border-gray-700 hover:border-blue-500 transition-colors group bg-slate-800 shadow-xl">
-                    <div class="relative overflow-hidden rounded-lg h-32 mb-4 bg-slate-700">
+                <div class="p-8 border rounded-lg dark:border-white hover:border-red-500 transition-colors group bg-black shadow-xl">
+                    <div class="relative overflow-hidden rounded-lg h-32 mb-4 bg-gray-700">
                         <img class="object-contain w-full h-full group-hover:scale-110 transition-transform duration-500" 
                             src="${mandos.imagen}" alt="${mandos.Modelo}">
                     </div>
@@ -76,7 +76,7 @@ const cargarTienda = async () => {
                     <div class="flex flex-col justify-between">
                         <div>
                             <h1 class="font-bold text-white uppercase text-sm line-clamp-1 mb-1">${mandos.Modelo}</h1>
-                            <span class="text-[10px] bg-blue-600 text-white px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
+                            <span class="text-[15px] bg-gray-600 text-black px-2 py-0.5 rounded-full font-bold uppercase tracking-tighter">
                                 ${mandos.Precio}
                             </span>
                         </div>
@@ -84,7 +84,7 @@ const cargarTienda = async () => {
                             <button 
                             data-titulo="${mandos.Modelo}" 
                             data-precio="${mandos.Precio}"
-                            class="btn-agregar bg-blue-600 hover:bg-blue-500 text-white p-2 rounded-lg transition-all active:scale-95">
+                            class=" btn-agregar  bg-gray-600 hover:bg-white text-black p-2 rounded-lg transition-all active:scale-95">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
                                 </svg>

@@ -22,3 +22,7 @@
         background: rgba(0, 0, 0, 0.6);
         z-index: 1000;
 }
+
+body{
+    background-color: rgb(0, 0, 0);
+}

@@ -13,30 +13,97 @@
 
 <body >
 
-        <!-- Contenedor del formulario -->
-    <div class="bg-gray-100 flex items-center justify-center ">
-    <div class="w-full max-w-md bg-white rounded-lg shadow-lg p-6 bh ">
-        <h2 class="text-2xl font-bold text-center mb-6 text-blue-600">Registro de Usuario</h2>
-        <form action="#" method="POST" class="space-y-4"> <!-- Nombre -->
-            <div> <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre completo</label> <input
-                    type="text" id="nombre" name="nombre" required class="input-field" placeholder="Ingresa tu nombre">
-            </div> <!-- Email -->
-            <div> <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label> <input
-                    type="email" id="email" name="email" required class="input-field" placeholder="ejemplo@correo.com">
-            </div> <!-- Contraseña -->
-            <div> <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label> <input
-                    type="password" id="password" name="password" required class="input-field" placeholder="********">
-            </div> <!-- Confirmar contraseña -->
-            <div> <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirmar
-                    contraseña</label> <input type="password" id="confirm-password" name="confirm-password" required
-                    class="input-field" placeholder="********"> </div> <!-- Botón --> <button type="submit"
-                class="btn-primary w-full">Registrarse</button>
-        </form> <!-- Enlace de login -->
-        <p class="text-sm text-center mt-4 text-gray-600"> ¿Ya tienes cuenta? <a href="#"
-                class="text-blue-600 hover:underline">Inicia sesión</a> </p>
-    </div>
-    </div>
-    <script type="module" src="../js/main.js"></script>
+    <!--FORMULARIO-->
+    <section
+      class="bg-gray-500 min-h-screen flex items-center justify-center p-4"
+    >
+      <form
+        id="formulario"
+        class="bg-gray-400 p-8 rounded-xl shadow-2xl w-full max-w-md border border-gray-400"
+      >
+        <h2
+          class="text-2xl font-bold text-black mb-6 border-l-4 border-gray-900 pl-3 uppercase bg-gray-500"
+        >
+          Registro <span class="text-white">Formulario</span>
+        </h2>
+
+        <div class="mb-4">
+          <label class="block text-black text-sm mb-2"
+            >Nombre Completo</label
+          >
+          <input
+            type="text"
+            id="username"
+            placeholder="Juan Pérez"
+            class="w-full bg-gray-600 border border-white rounded-lg p-2.5 text-gray-300 focus:ring-2 focus:ring-black outline-none transition-all text-sm"
+          />
+          <span
+            id="error-username"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Debe tener entre 3 y 16 letras.</span
+          >
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-black text-sm mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="correo@ejemplo.com"
+            class="w-full bg-gray-600 border border-white rounded-lg p-2.5 text-gray-300 focus:ring-2 focus:ring-black outline-none transition-all text-sm"
+          />
+          <span
+            id="error-email"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Email no válido.</span
+          >
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-black text-sm mb-2">Contraseña</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            class="w-full bg-gray-600 border border-white rounded-lg p-2.5 text-gray-300 focus:ring-2 focus:ring-black outline-none transition-all text-sm"
+          />
+          <span
+            id="error-password"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Mínimo 8 caracteres, 1 letra y 1 número.</span
+          >
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-black text-sm mb-2"
+            >Confirmar Contraseña</label
+          >
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="••••••••"
+            class="w-full bg-gray-600 border border-white rounded-lg p-2.5 text-gray-300 focus:ring-2 focus:ring-black outline-none transition-all text-sm"
+          />
+          <span
+            id="error-confirmPassword"
+            class="text-red-500 text-[10px] mt-1 hidden italic"
+            >Las contraseñas no coinciden.</span
+          >
+        </div>
+
+        <button
+          type="submit"
+          class="w-full bg-cyan-600 hover:bg-cyan-500 text-white font-bold py-3 rounded-lg transition-colors uppercase tracking-widest"
+        >
+          Registrarse
+        </button>
+        <p class="text-sm text-center mt-4 text-black"> ¿Ya tienes cuenta? <a href="#"
+                class="text-blue-800 hover:underline">Inicia sesión</a> </p>
+      </form>
+    </section>
+        
+   
+    <script type="module" src="../js/contacto.js"></script>
 </body>
 
 </html>
