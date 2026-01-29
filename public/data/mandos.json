@@ -1,0 +1,42 @@
+[
+    {
+        "Modelo":"PlayStation Portal",
+        "Precio": 600 ,
+        "imagen":"/image/portal.png"
+    },
+    {
+        "Modelo":"PlayStation 5 Pro" ,
+        "Precio": 800 ,
+        "imagen":"/image/ps5pro.png"
+    },
+    {
+        "Modelo":"PlayStation 5" ,
+        "Precio": 500 ,
+        "imagen":"/image/ps5.png"
+    },
+    {
+        "Modelo":"PlayStation 4 Pro" ,
+        "Precio": 480 ,
+        "imagen":"/image/ps4pro.png"
+    },
+    {
+        "Modelo":"PlayStation 4" ,
+        "Precio": 400 ,
+        "imagen":"/image/ps4.png"
+    },
+    {
+        "Modelo":"PlayStation 3" ,
+        "Precio": 300 ,
+        "imagen":"/image/ps3.png"
+    },
+    {
+        "Modelo":"PlayStation 2" ,
+        "Precio": 300 ,
+        "imagen":"/image/PS2.png"
+    },
+    {
+        "Modelo":"PlayStation 1" ,
+        "Precio": 300 ,
+        "imagen":"/image/ps1.png"
+    }
+]
