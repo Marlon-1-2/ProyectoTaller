@@ -1,142 +1,180 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/image/ps.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acerca de PlayStation</title>
-  <!-- Tailwind + Flowbite -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/acerca.css" />
+  <link rel="icon" type="image/png" href="/image/ps.png" />
 </head>
 
-<body class="bg-slate-900 text-white">
+<body class="bg-gray-700 text-black">
+    <nav class="bg-blue-900 border-b border-cyan-900/50 sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/image/ps.png" class="h-8" alt="play Logo" />
+                <span class="self-center text-2xl font-black whitespace-nowrap text-white tracking-tighter">
+                    Play<span class="text-black">Station</span>
+                </span>
+            </a>
 
-  <!-- Navbar con Flowbite -->
-  <nav class="bg-blue-900 border-b border-cyan-900/50 sticky top-0 z-50">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="../../index.html" class="flex items-center space-x-3">
-        <img src="/image/ps.png" class="h-8" alt="Logo PlayStation" />
-        <span class="self-center text-2xl font-black whitespace-nowrap text-white tracking-tighter">
-          Play<span class="text-black">Station</span>
-        </span>
-      </a>
+            <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse items-center gap-4">
+                <a href="/src/pages/carrito.html"
+                    class="relative bg-slate-800 p-2 rounded-full border border-slate-700 hover:border-cyan-500 transition group">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white group-hover:text-cyan-400"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                    <span id="carrito-contador"
+                        class="absolute -top-1 -right-1 bg-red-500 text-[10px] font-bold rounded-full h-4 w-4 flex items-center justify-center text-white">
+                        0
+                    </span>
+                </a>
 
-      <!-- Botón hamburguesa -->
-      <button data-collapse-toggle="navbar-default" type="button"
-        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-slate-800 focus:outline-none">
-        <span class="sr-only">Abrir menú</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-          viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M1 1h15M1 7h15M1 13h15" />
-        </svg>
-      </button>
+                <button data-collapse-toggle="navbar-default" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-slate-800 focus:outline-none">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
 
-      <!-- Menú -->
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul
-          class="font-medium flex flex-col md:flex-row md:space-x-8 bg-slate-800 md:bg-transparent p-4 md:p-0 rounded-lg">
-          <li><a href="../../index.html"
-              class="block py-2 px-3 text-blue-400 hover:text-white font-bold">Home</a></li>
-          <li><a href="/src/pages/acerca.html"
-              class="block py-2 px-3 text-white hover:text-blue-400 transition">Acerca de</a></li>
-          <li><a href="/src/pages/catalogo.html"
-              class="block py-2 px-3 text-white hover:text-blue-400 transition">Catálogo</a></li>
-          <li><a href="javascript:void(0)"
-              class="block py-2 px-3 text-white hover:text-blue-400 transition btn-contacto">Contacto</a></li>
-          <li><a href="/src/pages/carrito.html"
-              class="block py-2 px-3 text-white hover:text-blue-400 transition">Carrito</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-slate-800 rounded-lg bg-slate-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="../../index.html "
+                            class="block py-2 px-3 text-blue-400 rounded-sm hover:text-white md:p-0 font-bold">Home</a>
+                    </li>
+                    <li>
+                        <a href="../pages/acerca.html"
+                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Acerca
+                            de</a>
+                    </li>
+                    <li>
+                        <a href="catalogo.html"
+                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Catalogo</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)"
+                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition ... btn-contacto">Contacto</a>
+                        </li>
+                    
+                    <li>
+                        <a href="/src/pages/carrito.html"
+                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero con Flowbite -->
-  <section class="bg-gradient-to-r from-blue-800 to-cyan-700 py-16 text-center">
-    <h1 class="text-5xl font-extrabold mb-4">Acerca de <span class="text-yellow-300">PlayStation</span></h1>
-    <p class="max-w-2xl mx-auto text-lg text-gray-200">
-      Descubre la historia, evolución y legado de la marca que revolucionó el mundo de los videojuegos.
+ 
+ <section class="relative w-full h-96 bg-cover bg-center text-center" 
+         style="background-image: url('/image/historia.png');">
+  <!-- Overlay oscuro para mejorar legibilidad -->
+  <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center px-4">
+    <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">
+      Acerca de <span class="text-blue-500">PlayStation</span>
+    </h1>
+    <p class="text-slate-200 max-w-2xl mx-auto">
+      Desde 1994, PlayStation ha transformado la manera en que jugamos, conectamos y disfrutamos del entretenimiento digital.
     </p>
-  </section>
+  </div>
+</section>
 
-  <!-- Sección Historia con tarjetas Flowbite -->
-  <section class="max-w-6xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-400 pl-4">Historia de PlayStation</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Tarjeta PS1 -->
-      <div class="max-w-sm bg-slate-800 border border-gray-700 rounded-lg shadow hover:scale-105 transition">
-        <img class="rounded-t-lg" src="/image/ps1.png" alt="PlayStation 1" />
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-2">PlayStation 1 (1994)</h3>
-          <p class="text-gray-300">Introdujo juegos en CD y gráficos 3D, marcando el inicio de una nueva era.</p>
-        </div>
-      </div>
-      <!-- Tarjeta PS2 -->
-      <div class="max-w-sm bg-slate-800 border border-gray-700 rounded-lg shadow hover:scale-105 transition">
-        <img class="rounded-t-lg" src="/image/PS2.png" alt="PlayStation 2" />
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-2">PlayStation 2 (2000)</h3>
-          <p class="text-gray-300">La consola más vendida de la historia, con soporte para DVD y un catálogo inmenso.</p>
-        </div>
-      </div>
-      <!-- Tarjeta PS5 -->
-      <div class="max-w-sm bg-slate-800 border border-gray-700 rounded-lg shadow hover:scale-105 transition">
-        <img class="rounded-t-lg" src="/image/ps5.png" alt="PlayStation 5" />
-        <div class="p-5">
-          <h3 class="text-xl font-bold mb-2">PlayStation 5 (2020)</h3>
-          <p class="text-gray-300">Potencia de nueva generación con SSD ultrarrápido, Ray Tracing y juegos en 4K.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Timeline con Flowbite -->
-  <section class="max-w-5xl mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold mb-8 border-l-4 border-blue-400 pl-4">Línea de tiempo</h2>
+  <section class="max-w-screen-xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-cyan-500 pl-3">Historia de las Consolas</h2>
     <ol class="relative border-l border-gray-700">
       <li class="mb-10 ml-6">
-        <span
-          class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-4 ring-4 ring-slate-900">
-        </span>
-        <h3 class="text-lg font-semibold">1994 - PlayStation 1</h3>
-        <p class="text-gray-300">Sony lanza su primera consola con juegos en CD y gráficos 3D.</p>
+        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-1.5 border border-white"></div>
+        <h3 class="text-lg font-semibold text-white">PlayStation (1994)</h3>
+        <p class="text-slate-400">La primera consola de Sony, revolucionó el mercado con juegos en CD y títulos icónicos como Final Fantasy VII.</p>
       </li>
       <li class="mb-10 ml-6">
-        <span
-          class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-4 ring-4 ring-slate-900">
-        </span>
-        <h3 class="text-lg font-semibold">2000 - PlayStation 2</h3>
-        <p class="text-gray-300">La consola más vendida de la historia, con más de 155 millones de unidades.</p>
+        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-1.5 border border-white"></div>
+        <h3 class="text-lg font-semibold text-white">PlayStation 2 (2000)</h3>
+        <p class="text-slate-400">La consola más vendida de la historia, con más de 155 millones de unidades y soporte para DVD.</p>
       </li>
       <li class="mb-10 ml-6">
-        <span
-          class="absolute flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full -left-4 ring-4 ring-slate-900">
-        </span>
-        <h3 class="text-lg font-semibold">2020 - PlayStation 5</h3>
-        <p class="text-gray-300">Nueva generación con SSD ultrarrápido, Ray Tracing y mando DualSense.</p>
+        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-1.5 border border-white"></div>
+        <h3 class="text-lg font-semibold text-white">PlayStation 3 (2006)</h3>
+        <p class="text-slate-400">Introdujo Blu-ray y el acceso a PlayStation Network, expandiendo el ecosistema digital.</p>
+      </li>
+      <li class="mb-10 ml-6">
+        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-1.5 border border-white"></div>
+        <h3 class="text-lg font-semibold text-white">PlayStation 4 (2013)</h3>
+        <p class="text-slate-400">Consola que consolidó títulos exclusivos como God of War y Horizon Zero Dawn, además de streaming y social gaming.</p>
+      </li>
+      <li class="ml-6">
+        <div class="absolute w-3 h-3 bg-cyan-500 rounded-full -left-1.5 border border-white"></div>
+        <h3 class="text-lg font-semibold text-white">PlayStation 5 (2020)</h3>
+        <p class="text-slate-400">La actual generación, con gráficos 4K, SSD ultrarrápido y experiencias inmersivas con DualSense.</p>
       </li>
     </ol>
   </section>
 
-  <!-- Modal de contacto -->
-  <div id="overlayContacto" onclick="cerrarContacto()"></div>
-  <div id="modalContacto">
-    <div id="modal">
-      <button onclick="cerrarContacto()" class="absolute top-2 right-2 text-white bg-red-600 hover:bg-red-500 rounded-full px-2">✕</button>
-      <iframe src="/src/pages/contacto.html" style="width:100%; height:100%; border:none"></iframe>
+  <section class="max-w-screen-xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-6 border-l-4 border-cyan-500 pl-3">Servicios PlayStation</h2>
+    <div id="accordion-collapse" data-accordion="collapse">
+      <h2>
+        <button type="button" class="flex items-center justify-between w-full p-4 font-medium text-left text-white bg-slate-800 border border-gray-700 rounded-t-lg"
+          data-accordion-target="#psn" aria-expanded="true" aria-controls="psn">
+          <span>PlayStation Network</span>
+          <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+      </h2>
+      <div id="psn" class="hidden p-4 bg-slate-700 border border-gray-700">
+        <p>La plataforma online que conecta a millones de jugadores en todo el mundo, ofreciendo juegos digitales, multijugador y contenido exclusivo.</p>
+      </div>
+
+      <h2>
+        <button type="button" class="flex items-center justify-between w-full p-4 font-medium text-left text-white bg-slate-800 border border-gray-700"
+          data-accordion-target="#plus" aria-expanded="false" aria-controls="plus">
+          <span>PlayStation Plus</span>
+          <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+      </h2>
+      <div id="plus" class="hidden p-4 bg-slate-700 border border-gray-700">
+        <p>Servicio de suscripción que ofrece juegos mensuales, multijugador online y acceso a catálogos clásicos.</p>
+      </div>
+
+      <h2>
+        <button type="button" class="flex items-center justify-between w-full p-4 font-medium text-left text-white bg-slate-800 border border-gray-700 rounded-b-lg"
+          data-accordion-target="#cloud" aria-expanded="false" aria-controls="cloud">
+          <span>PlayStation Cloud Gaming</span>
+          <svg class="w-6 h-6 shrink-0" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+      </h2>
+      <div id="cloud" class="hidden p-4 bg-slate-700 border border-gray-700">
+        <p>Permite jugar títulos de generaciones anteriores y actuales en streaming, sin necesidad de descarga.</p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="bg-slate-800 text-center py-6 mt-12">
-    <p class="text-gray-300">&copy; 2026 PlayStore - Todos los derechos reservados Marlon Minango, Mathew Castro</p>
-  </footer>
-
-  
-  <script type="module" src="/src/js/main.js"></script>
+  <div id="overlayContacto" onclick="cerrarContacto()">
+</div> 
+<div id="modalContacto"> 
+    <div id="modal"> <button onclick="cerrarContacto()" style="position: absolute; top: 8px; right: 10px; z-index: 10">
+        ✕
+    </button> 
+    <iframe src="/src/pages/contacto.html" style="width:100%; height:100%; border:none">
+    </iframe> 
+</div> 
+</div>
+     <footer>
+        <p>
+            &copy; 2026 PlayStore - Todos los derechos reservados Marlon Minango
+            Mathew Castro
+        </p>
+    </footer>
+    <script type="module" src="/src/js/main.js"></script>
 </body>
 
 </html>

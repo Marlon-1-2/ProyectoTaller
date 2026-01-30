@@ -1,0 +1,24 @@
+#modalContacto{
+  display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        align-items: center;
+        justify-content: center;
+}
+#modal{
+  width: 90%;
+        max-width: 520px;
+        height: 85%;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+}
+#overlayContacto{
+  display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+}

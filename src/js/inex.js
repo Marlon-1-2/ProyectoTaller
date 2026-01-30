@@ -2,6 +2,7 @@ import '../css/style.css';
 import 'flowbite';
 
 
+
 // Función para abrir el modal de contacto
 export const abrirContacto = () => {
     const overlay = document.getElementById("overlayContacto");
@@ -24,6 +25,7 @@ export const cerrarContacto = () => {
     }
 };
 
+
 // Permitir cerrar con tecla ESC
 document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
@@ -38,6 +40,8 @@ document.addEventListener("click", (e) => {
         abrirContacto();
     }
 });
+
+
 
 
     
