@@ -1,3 +1,12 @@
+/* Footer */
+footer {
+  background: #0a0a0a;
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
 #modalContacto{
   display: none;
         position: fixed;
