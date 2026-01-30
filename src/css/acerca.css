@@ -22,3 +22,11 @@
         background: rgba(0, 0, 0, 0.6);
         z-index: 1000;
 }
+footer {
+  background: #0a0a0a;
+  color: #f9fafb;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
