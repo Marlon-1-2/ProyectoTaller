@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/image/play.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/catalogo.css">
-    <title>Document</title>
+    <title>Carrito</title>
 </head>
 
 <body>
@@ -48,60 +46,58 @@
                 <ul
                     class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-slate-800 rounded-lg bg-slate-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
                     <li>
-                        <a href="../../index.html "
+                        <a href=/index.html"
                             class="block py-2 px-3 text-blue-400 rounded-sm hover:text-white md:p-0 font-bold">Home</a>
                     </li>
                     <li>
-                        <a href="../pages/acerca.html"
+                        <a href="/src/pages/acerca.html"
                             class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Acerca
                             de</a>
                     </li>
                     <li>
-                        <a href="catalogo.html"
+                        <a href="/src/pages/catalogo.html"
                             class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Catalogo</a>
                     </li>
                     <li>
                         <a href="javascript:void(0)"
-                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition ... btn-contacto">contacto</a>
-                        </li>
-                    
+                            class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition btn-contacto">contacto</a>
+                    </li>
                     <li>
-                        <a href="/src/pages/carrito.html"
+                        <a href="/ProyectoTaller/index.html"
                             class="block py-2 px-3 text-white rounded-sm hover:text-blue-400 md:p-0 transition">Carrito</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="banner" class="bg-black text-white text-center py-2 cursor-pointer select-none uppercase">
-        Envio gratuito de pedidos superiores a $50
-    </div>
-
-    
-    <!--Grid-->
-    <section class="bg-gradient-to-r from-black via-gray-600 to-black  min-h-screen mx-auto px-4 py-10">
-        <h2 class="text-3xl font-black text-white mb-8 border-l-4 border-white bg-slate-800 pl-4 uppercase">Explorar
-            <span class="text-black">Consolas</span></h2>
-        <div id="contenedor-consolas" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <p class="text-white text-center col-span-full">Conectando con la tienda...</p>
+    <div class="max-w-screen-xl mx-auto p-4">
+        <h1 class="text-3xl font-black text-white mb-8 border-l-4 border-[#0070D1] bg-[#000000] pl-4 uppercase">
+            Tu <span class="text-[#00AEEF]">Carrito</span>
+        </h1>
+        <div id="lista-carrito" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
         </div>
-    </section>
-
-    
-<div id="overlayContacto" onclick="cerrarContacto()">
-</div> 
-<div id="modalContacto"> 
-    <div id="modal"> <button onclick="cerrarContacto()" style="position: absolute; top: 8px; right: 10px; z-index: 10">
-        ✕
-    </button> 
-    <iframe src="/src/pages/contacto.html" style="width:100%; height:100%; border:none">
-    </iframe> 
-</div> 
-</div>
-
-    <!--enlace al main js-->
-    <script type="module" src="/src/js/catalogo.js"></script>
-
+        <div class="mt-10 border-t border-[#1C1C1C] pt-6 flex justify-between items-center">
+            <span class="text-xl font-bold text-white">Total:</span>
+            <span id="total-compras" class="text-3xl font-black text-[#00AEEF]">$0.00</span>
+        </div>
+    </div>
+    <div class="mt-6 flex justify-end">
+        <button id="btn-limpiar" class="bg-[#003791] text-white px-4 py-2 rounded-md hover:bg-[#0070D1] transition">
+            Limpiar
+        </button>
+    </div>
+    <div id="overlayContacto" onclick="cerrarContacto()">
+    </div>
+    <div id="modalContacto">
+        <div id="modal"> <button onclick="cerrarContacto()"
+                style="position: absolute; top: 8px; right: 10px; z-index: 10">
+                ✕
+            </button>
+            <iframe src="/src/pages/contacto.html" style="width:100%; height:100%; border:none">
+            </iframe>
+        </div>
+    </div>
+    <script type="module" src="/src/js/carrito.js"></script>
 </body>
 
 </html>
